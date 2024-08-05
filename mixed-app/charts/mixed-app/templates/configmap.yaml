@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mixed-app-config
+data:
+  NGINX_PORT: {{ .Values.config.NGINX_PORT | quote }}
+  WORKER_PROCESSES: {{ .Values.config.WORKER_PROCESSES | quote }}

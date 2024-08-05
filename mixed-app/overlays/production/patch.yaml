@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mixed-app
+spec:
+  replicas: 3
+  template:
+    spec:
+      containers:
+      - name: mixed-app
+        envFrom:
+        - configMapRef:
+            name: mixed-app-config
